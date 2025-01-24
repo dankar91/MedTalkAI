@@ -77,8 +77,9 @@ Telegram-бот для практики медицинского английс�
 - OpenAI API (GPT-4, Whisper, TTS)
 - SQLAlchemy + PostgreSQL
 
-```
 ## Структура
+```
+
 Medical-English-Bot/
 ├── data/
 │   └── medical_scenarios.json     # Сценарии диалогов
