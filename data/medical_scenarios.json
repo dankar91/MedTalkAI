@@ -1,0 +1,263 @@
+{
+  "scenarios": [
+    {
+      "id": "beginner_1",
+      "difficulty": "beginner",
+      "patient_gender": "male",
+      "initial_complaint": "Hello doctor! I've been having a sore throat and fever for the past two days.",
+      "symptoms": {
+        "fever": "38.5°C",
+        "sore_throat": "severe",
+        "cough": "mild",
+        "duration": "2 days"
+      },
+      "correct_diagnosis": "Strep throat",
+      "hints": [
+        "Ask about fever",
+        "Check for difficulty swallowing",
+        "Ask about cough"
+      ],
+      "medical_terms": {
+        "sore_throat": {"en": "pharyngitis", "ru": "фарингит"},
+        "fever": {"en": "pyrexia", "ru": "пирексия"},
+        "swollen": {"en": "inflamed", "ru": "воспаленный"}
+      }
+    },
+    {
+      "id": "intermediate_1",
+      "difficulty": "intermediate",
+      "patient_gender": "neutral",
+      "initial_complaint": "Hello doctor! I've been experiencing headaches and dizziness lately.",
+      "symptoms": {
+        "headache": "moderate to severe",
+        "dizziness": "intermittent",
+        "blood_pressure": "150/95",
+        "stress_level": "high",
+        "duration": "2 weeks"
+      },
+      "correct_diagnosis": "Hypertension",
+      "hints": [
+        "Check blood pressure",
+        "Ask about lifestyle",
+        "Inquire about medication history",
+        "Ask about family history of hypertension",
+        "Check for other symptoms like vision problems"
+      ],
+      "medical_terms": {
+        "headache": {"en": "cephalgia", "ru": "цефалгия"},
+        "dizziness": {"en": "vertigo", "ru": "вертиго"},
+        "high blood pressure": {"en": "hypertension", "ru": "гипертензия"}
+      }
+    },
+    {
+      "id": "advanced_1",
+      "difficulty": "advanced",
+      "patient_gender": "neutral",
+      "initial_complaint": "Hello doctor! I don't feel well lately. I'm always tired, and sometimes I feel dizzy.",
+      "symptoms": {
+        "fatigue": "chronic",
+        "dizziness": "occasional",
+        "weight_loss": "unintentional",
+        "blood_sugar": "high",
+        "thirst": "increased",
+        "urination": "frequent"
+      },
+      "correct_diagnosis": "Type 2 Diabetes",
+      "hints": [
+        "Ask about eating and drinking habits",
+        "Check family history of diabetes",
+        "Inquire about weight changes",
+        "Ask about vision problems",
+        "Check for numbness in extremities"
+      ],
+      "medical_terms": {
+        "increased thirst": {"en": "polydipsia", "ru": "полидипсия"},
+        "frequent urination": {"en": "polyuria", "ru": "полиурия"},
+        "fatigue": {"en": "asthenia", "ru": "астения"}
+      }
+    },
+    {
+      "id": "beginner_2",
+      "difficulty": "beginner",
+      "patient_gender": "neutral",
+      "initial_complaint": "Hello doctor! I've been having a runny nose and sneezing for the last few days.",
+      "symptoms": {
+        "runny_nose": "clear discharge",
+        "sneezing": "frequent",
+        "eyes": "itchy",
+        "duration": "3 days"
+      },
+      "correct_diagnosis": "Allergic rhinitis",
+      "hints": [
+        "Ask about allergies",
+        "Check for seasonal patterns",
+        "Ask about eye symptoms"
+      ],
+      "medical_terms": {
+        "runny nose": {"en": "rhinorrhea", "ru": "ринорея"},
+        "allergic rhinitis": {"en": "hay fever", "ru": "сенная лихорадка"},
+        "itchy eyes": {"en": "ocular pruritus", "ru": "зуд глаз"}
+      }
+    },
+    {
+      "id": "intermediate_2",
+      "difficulty": "intermediate",
+      "patient_gender": "male",
+      "initial_complaint": "Hello doctor! I've been experiencing stomach pain and nausea for about a week.",
+      "symptoms": {
+        "abdominal_pain": "upper right quadrant",
+        "nausea": "after fatty meals",
+        "vomiting": "occasional",
+        "fever": "low-grade",
+        "duration": "7 days"
+      },
+      "correct_diagnosis": "Cholecystitis",
+      "hints": [
+        "Ask about pain location",
+        "Inquire about diet",
+        "Check for fever",
+        "Ask about pain timing related to meals",
+        "Check for previous similar episodes"
+      ],
+      "medical_terms": {
+        "stomach pain": {"en": "abdominal pain", "ru": "абдоминальная боль"},
+        "gallbladder inflammation": {"en": "cholecystitis", "ru": "холецистит"},
+        "nausea": {"en": "nausea", "ru": "тошнота"}
+      }
+    },
+    {
+      "id": "advanced_2",
+      "difficulty": "advanced",
+      "patient_gender": "female",
+      "initial_complaint": "Hello doctor! I've been having trouble sleeping and feeling anxious lately.",
+      "symptoms": {
+        "sleep": "insomnia",
+        "anxiety": "severe",
+        "concentration": "poor",
+        "appetite": "decreased",
+        "energy": "low",
+        "mood": "depressed",
+        "duration": "1 month"
+      },
+      "correct_diagnosis": "Major Depressive Disorder with Anxiety",
+      "hints": [
+        "Ask about sleep patterns",
+        "Check for changes in appetite",
+        "Inquire about daily activities and motivation",
+        "Ask about previous mental health history",
+        "Check for suicidal thoughts"
+      ],
+      "medical_terms": {
+        "insomnia": {"en": "insomnia", "ru": "бессонница"},
+        "anxiety": {"en": "anxietas", "ru": "тревожность"},
+        "depression": {"en": "major depressive disorder", "ru": "большое депрессивное расстройство"}
+      }
+    },
+    {
+      "id": "advanced_3",
+      "difficulty": "advanced",
+      "patient_gender": "male",
+      "initial_complaint": "Hello doctor! I've been experiencing chest pain and shortness of breath, especially when I'm stressed.",
+      "symptoms": {
+        "chest_pain": "sharp, radiating to left arm",
+        "shortness_of_breath": "moderate",
+        "heart_rate": "elevated",
+        "blood_pressure": "145/90",
+        "stress_level": "high",
+        "duration": "2 weeks"
+      },
+      "correct_diagnosis": "Angina Pectoris",
+      "hints": [
+        "Ask about pain characteristics",
+        "Check for triggers like physical activity or stress",
+        "Inquire about cardiovascular risk factors",
+        "Ask about radiation of pain",
+        "Check for associated symptoms like sweating or nausea"
+      ],
+      "medical_terms": {
+        "chest pain": {"en": "angina pectoris", "ru": "стенокардия"},
+        "shortness of breath": {"en": "dyspnea", "ru": "одышка"},
+        "heart rate": {"en": "pulse rate", "ru": "частота пульса"},
+        "blood pressure": {"en": "arterial pressure", "ru": "артериальное давление"},
+        "radiating pain": {"en": "referred pain", "ru": "отраженная боль"}
+      }
+    },
+    {
+      "id": "intermediate_3",
+      "difficulty": "intermediate",
+      "patient_gender": "male",
+      "initial_complaint": "Hello doctor! I have a persistent cough and fever that started about a week ago.",
+      "symptoms": {
+        "cough": "productive with yellow sputum",
+        "fever": "38.8°C",
+        "chest_pain": "when breathing deeply",
+        "fatigue": "moderate",
+        "appetite": "decreased",
+        "breathing_sounds": "crackles in right lower lobe"
+      },
+      "correct_diagnosis": "Bacterial Pneumonia",
+      "hints": [
+        "Ask about cough characteristics",
+        "Check for chest pain",
+        "Inquire about fever and chills",
+        "Ask about breathing difficulties",
+        "Check for recent illnesses or infections"
+      ],
+      "medical_terms": {
+        "productive cough": {"en": "wet cough", "ru": "влажный кашель"},
+        "sputum": {"en": "phlegm", "ru": "мокрота"},
+        "crackles": {"en": "rales", "ru": "хрипы"},
+        "pneumonia": {"en": "pneumonia", "ru": "пневмония"},
+        "lung inflammation": {"en": "pulmonary inflammation", "ru": "воспаление легких"}
+      }
+    },
+    {
+      "id": "beginner_3",
+      "difficulty": "beginner",
+      "patient_gender": "female",
+      "initial_complaint": "Hello doctor! I have a bad headache and sensitivity to light since this morning.",
+      "symptoms": {
+        "headache": "severe, throbbing",
+        "photophobia": "present",
+        "nausea": "mild",
+        "visual_disturbances": "aura before headache",
+        "duration": "6 hours"
+      },
+      "correct_diagnosis": "Migraine",
+      "hints": [
+        "Ask about headache characteristics",
+        "Check for light sensitivity",
+        "Ask about nausea or vomiting",
+        "Inquire about visual symptoms"
+      ],
+      "medical_terms": {
+        "headache": {"en": "cephalgia", "ru": "цефалгия"},
+        "light sensitivity": {"en": "photophobia", "ru": "светобоязнь"},
+        "visual disturbances": {"en": "aura", "ru": "аура"},
+        "throbbing pain": {"en": "pulsating pain", "ru": "пульсирующая боль"},
+        "migraine": {"en": "hemicrania", "ru": "мигрень"}
+      }
+    },
+    {
+      "id": "intermediate_4",
+      "difficulty": "intermediate",
+      "patient_gender": "female",
+      "initial_complaint": "Hello doctor! My joints are painful and stiff, especially in the morning.",
+      "symptoms": {
+        "joint_pain": "symmetric, multiple joints",
+        "morning_stiffness": "lasting >1 hour",
+        "fatigue": "present",
+        "joint_swelling": "mild",
+        "duration": "3 months"
+      },
+      "correct_diagnosis": "Rheumatoid Arthritis",
+      "medical_terms": {
+        "joint pain": {"en": "arthralgia", "ru": "артралгия"},
+        "joint inflammation": {"en": "arthritis", "ru": "артрит"},
+        "morning stiffness": {"en": "morning rigidity", "ru": "утренняя скованность"},
+        "rheumatoid arthritis": {"en": "rheumatoid arthritis", "ru": "ревматоидный артрит"},
+        "joint swelling": {"en": "articular edema", "ru": "отек суставов"}
+      }
+    }
+  ]
+}
