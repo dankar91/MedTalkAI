@@ -33,7 +33,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         try:
             with db_session() as session:
-                # Create or get user from database
+                # Создаем пользователя или используем из базы данных
                 db_user = session.query(User).filter_by(telegram_id=user.id).first()
                 if not db_user:
                     db_user = User(
@@ -238,7 +238,7 @@ async def handle_voice(update: Update, context: ContextTypes.DEFAULT_TYPE):
             audio_size = len(audio_content)
             logger.info(f"Received audio content of size: {audio_size} bytes")
             
-            if audio_size < 100:  # Suspiciously small file
+            if audio_size < 100:  
                 raise ValueError(f"Audio content too small ({audio_size} bytes)")
             
             voice_file = None
@@ -260,7 +260,7 @@ async def handle_voice(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 if file_size == 0:
                     raise ValueError("Voice file is empty")
                 
-                if file_size < 100:  # Additional size check
+                if file_size < 100:  
                     raise ValueError(f"Voice file too small: {file_size} bytes")
                 
                 logger.info(f"Voice file created successfully, size: {file_size} bytes")

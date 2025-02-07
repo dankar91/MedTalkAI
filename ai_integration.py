@@ -109,22 +109,22 @@ async def text_to_speech(text: str, conversation_context: dict = None) -> bytes:
         if not text:
             raise ValueError("Empty text provided for speech conversion")
             
-        # Ensure text is not too long
+        # Убедимся, что текст не слишком длинный
         if len(text) > 4096:
-            text = text[:4096]  # Telegram voice message limit
+            text = text[:4096]  # Лимит Telegram для голосовых сообщений
             logger.info(f"Text truncated to {len(text)} characters")
             
         logger.info("Making API request to OpenAI TTS...")
         try:
-            # Select voice based on patient gender with strict gender separation
+            # Выбор голоса в зависимости от пола пациента с четким разделением по полу
             if conversation_context and 'scenario' in conversation_context:
                 gender = conversation_context['scenario'].get('patient_gender', 'neutral')
                 logger.info(f"Selecting voice for gender: {gender}")
                 
-                # Define voices with primary choices for each gender
-                female_voice = 'nova'     # Primary female voice
-                male_voice = 'echo'       # Primary male voice
-                neutral_voice = 'alloy'   # Neutral voice
+                # Определение голосов с основными вариантами для каждого пола
+                female_voice = 'nova'     # Женский голос
+                male_voice = 'echo'       # Мужской голос
+                neutral_voice = 'alloy'   # Нейтральный голос
                 
                 if gender == 'female':
                     voice = female_voice
@@ -136,7 +136,7 @@ async def text_to_speech(text: str, conversation_context: dict = None) -> bytes:
                     voice = neutral_voice
                     logger.info("Using neutral voice: alloy")
             else:
-                voice = 'alloy'  # Default to neutral voice if no context
+                voice = 'alloy'  # По умолчанию нейтральный голос, если контекст отсутствует
                 logger.info("No context provided, using default neutral voice: alloy")
             
             logger.info(f"Using voice: {voice} for gender: {gender if conversation_context else 'unknown'}")
@@ -145,7 +145,7 @@ async def text_to_speech(text: str, conversation_context: dict = None) -> bytes:
                 model="tts-1",
                 voice=voice,
                 input=text,
-                response_format="opus",  # Using opus format which is better supported by Telegram
+                response_format="opus",  # Используем формат opus, который лучше поддерживается
                 speed=1.0
             )
             
@@ -162,7 +162,7 @@ async def text_to_speech(text: str, conversation_context: dict = None) -> bytes:
             content_size = len(content)
             logger.info(f"Received audio content: {content_size} bytes")
             
-            if content_size < 100:  # Suspiciously small file
+            if content_size < 100:  # Подозрительно маленький файл
                 raise ValueError(f"Audio content too small ({content_size} bytes)")
                 
             logger.info("Text-to-speech conversion completed successfully")
