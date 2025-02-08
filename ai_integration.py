@@ -1,15 +1,27 @@
 import os
 import json
 import logging
+import httpx
 from pathlib import Path
 from openai import OpenAI
 
-from config import OpenAIkey
+from config import OpenAIkey, http_proxy, https_proxy
 
 # Настройка логирования
 logger = logging.getLogger(__name__)
 
-client = OpenAI(api_key=OpenAIkey)
+# Настройка HTTP прокси
+client = OpenAI(
+    api_key=OpenAIkey,
+    base_url="https://api.openai.com/v1",
+    http_client=httpx.Client(
+        transport=httpx.HTTPTransport(
+            proxy=http_proxy or https_proxy,
+            local_address="0.0.0.0"
+        ) if (http_proxy or https_proxy) else None
+    )
+)
+
 
 async def process_voice_message(voice_file) -> str:
     """Обработка голосового сообщения с помощью Whisper API"""
