@@ -74,10 +74,12 @@ Telegram-бот для практики медицинского английс�
 4. dialog_manager.py -> database.py -> PostgreSQL
 
 ## Технологии
-- Python 3.11
-- python-telegram-bot
-- OpenAI API (GPT-4, Whisper, TTS)
-- SQLAlchemy + PostgreSQL
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI_GPT-4-412991?style=for-the-badge&logo=openai&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI_Whisper-412991?style=for-the-badge&logo=openai&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI_TTS-412991?style=for-the-badge&logo=openai&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 ## Структура
 ```
